@@ -21,20 +21,17 @@ int main(int argc, char const *argv[])
   {
     for (nHen = 0; nHen <= maxHen; nHen++)
     {
-      for (nChick = 0; nChick <= maxChick; nChick++)
+      nChick = 100 - nCock - nHen;
+      // check condition
+      if (nChick % 3 == 0)
       {
-        // check condition
-        if (nChick % 3 == 0)
+        int totalMoney = 5 * nCock + 3 * nHen + int(1 * nChick / 3);
+        if (totalMoney == 100)
         {
-          int totalNumber = nCock + nHen + nChick;
-          int totalMoney = 5 * nCock + 3 * nHen + int(1 * nChick / 3);
-          if ((totalNumber == 100) && (totalMoney == 100))
-          {
-            std::cout << "Solution:\n";
-            std::cout << "Number of cock    = " << nCock << std::endl;
-            std::cout << "Number of Hen     = " << nHen << std::endl;
-            std::cout << "Number of Chicken = " << nChick << std::endl;
-          }
+          std::cout << "Solution:\n";
+          std::cout << "Number of cock    = " << nCock << std::endl;
+          std::cout << "Number of Hen     = " << nHen << std::endl;
+          std::cout << "Number of Chicken = " << nChick << std::endl;
         }
       }
     }
