@@ -53,3 +53,56 @@ for (int i = 0; i < 100; i++) {
 ```
 
 ## Code implementation
+
+check `main.cpp`. The main part of the code is a nested `for` loop
+
+```c++
+for (nCock = 0; nCock <= maxCock; nCock++)
+  {
+    for (nHen = 0; nHen <= maxHen; nHen++)
+    {
+      for (nChick = 0; nChick <= maxChick; nChick++)
+      {
+        // check condition
+        if (nChick % 3 == 0) // condition 3
+        {
+          // helper variables
+          if ((totalNumber == 100) && (totalMoney == 100)) // condition 1 and 2
+          {
+            // print the solution
+          }
+        }
+      }
+    }
+  }
+```
+
+### Code Optimazation
+
+Any algorithm has a specific **time** complexity and a specific **spatial** complexity.
+
+We way our algorithm has a complexity as smaller as possible.
+
+- less loop
+- less condition check
+
+**Optimazation one**
+
+```c++
+for (nCock = 0; nCock <= maxCock; nCock++)
+  {
+    for (nHen = 0; nHen <= maxHen; nHen++)
+    {
+      nChick = 100 - nCock - nHen; // condition 2
+      // check condition
+      if (nChick % 3 == 0) // condition 3
+      {
+        // helper variable
+        if (totalMoney == 100) // condition 1
+        {
+          // print solution
+        }
+      }
+    }
+  }
+```
