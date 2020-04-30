@@ -11,12 +11,28 @@ int main(int argc, char const *argv[])
   {
     for (bB = 1; bB <= 5; bB++)
     {
-      for (bC = 1; bC <= 5; bC++)
+      if (bB != bA)
       {
-        if ((bA != bB) && (bB != bC) && (bC != bA))
+        for (bC = 1; bC <= 5; bC++)
         {
-          std::cout << "A: " << bA << " B: " << bB << " C: " << bC << std::endl;
+          if (bC != bB)
+          {
+            {
+              if (bC != bA)
+              {
+                std::cout << "A: " << bA << " B: " << bB << " C: " << bC << std::endl;
+              }
+            }
+          }
+          else
+          {
+            continue;
+          }
         }
+      }
+      else
+      {
+        continue;
       }
     }
   }
