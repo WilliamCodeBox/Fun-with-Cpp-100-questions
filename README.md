@@ -7,8 +7,8 @@ Enjoy and master Cpp programming by solving 100 questions
 ### `REAMD.md` within each project\*\*
 
 - Question description
-- Procedure to solve the problem
-- Cpp building blocks used
+- Algorithm to solve the problem
+- Cpp building blocks
 
 ### `Cpp files` within each project\*\*
 
