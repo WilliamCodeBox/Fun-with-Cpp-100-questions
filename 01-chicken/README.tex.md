@@ -56,7 +56,24 @@ There are two things we need to determine
 
 ## Cpp Building blocks
 
+- `if...else` statement
+
+[Reference: if statement](https://en.cppreference.com/w/cpp/language/if)
+[Reference: logical operators](https://en.cppreference.com/w/cpp/language/if)
+
+example:
+
+```c++
+if (condition) {
+  // do job A
+} else {
+ // do job B
+}
+```
+
 - `for` loop
+
+[Reference](https://en.cppreference.com/w/cpp/language/for)
 
 example:
 
