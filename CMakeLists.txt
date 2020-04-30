@@ -4,3 +4,4 @@ set                   (CMAKE_CXX_STANDARD 14)
 
 
 add_subdirectory(01-chicken)
+add_subdirectory(02-book)
