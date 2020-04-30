@@ -10,7 +10,7 @@ The prices for different kinds of chicken:
 
 Given 100 and the condition that the total number is 100, how many cocks, hens, and chicken can you buy?
 
-## Procedure
+## Algorithm
 
 Denote the number of cocks is `nCock`, the number of hens is `nHen`, and the number of chicken is `nChick`.
 
@@ -27,23 +27,49 @@ We can use **Exhaustive method** to solve the indeterminate system of equations,
 There are two things we need to determine
 
 - The upper limit of number for each kind of chicken.
+
   - `int(100 / 5)` for Cock
   - `int(100 / 3)` for Hen
   - `int(100 / 1) * 3` for Chicken, but the total number condition is 100, thus the upper limit for chicken is 100
+
 - The conditions we have to achieve
+
   - total money is 100
   - total number is 100
   - number of chicken is integer multiples of 3
 
+> Algorithm
+>
+> - maximum numbers of cocks, mCock
+> - maximum number of hens, mHen
+> - maximum number of chicken. mChick
+>
+> * for nCock in [0, mCock]
+>   - for nHen in [0, mHen]
+>     - for nChick in [0, mChick]
+>       - check conditions
+
 ## Cpp Building blocks
 
-`for` loop
+- `for` loop
 
 example:
 
 ```c++
 for (int i = 0; i < 100; i++) {
   // do something with or without i
+}
+```
+
+- nested `for` loop
+
+example:
+
+```c++
+for (int i = 0; i < 100; i++) {
+  for (int j = 0; j < 100; j++) {
+    // do something with or without i, j
+  }
 }
 ```
 
@@ -81,7 +107,7 @@ We way our algorithm has a complexity as smaller as possible.
 - less loop
 - less condition check
 
-**Optimazation one**
+**Optimazation**
 
 ```c++
 for (nCock = 0; nCock <= maxCock; nCock++)
